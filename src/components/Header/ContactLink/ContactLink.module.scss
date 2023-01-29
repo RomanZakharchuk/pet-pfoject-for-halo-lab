@@ -1,0 +1,13 @@
+@use "src/scss/btns";
+@use "src/scss/displaySizes";
+
+.contactLink {
+  display: none;
+  @include btns.headerBtn();
+}
+
+@media all and (min-width: displaySizes.$TABLE_WIDTH) {
+  .contactLink {
+    display: block;
+  }
+}

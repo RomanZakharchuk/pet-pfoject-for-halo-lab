@@ -1,0 +1,47 @@
+@use "src/scss/fontStyle";
+@use "src/scss/btns";
+@use "src/scss/displaySizes";
+@use "src/scss/transition";
+
+.questionsTitleBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 48px;
+  @include transition.transitionAll();
+
+  .title {
+    @include fontStyle.h2();
+    margin-bottom: 20px;
+    @include transition.transitionAll();
+  }
+
+  .text {
+    max-width: 423px;
+    @include fontStyle.textSection();
+    margin-bottom: 32px;
+    @include transition.transitionAll();
+  }
+
+  .btn {
+    @include btns.btn();
+    text-decoration: none;
+  }
+}
+
+@media all and (min-width: displaySizes.$LAPTOP_WIDTH) {
+  .questionsTitleBlock {
+    margin-bottom: 0;
+    @include transition.transitionAll();
+
+    .title {
+      margin-bottom: 40px;
+      @include transition.transitionAll();
+    }
+
+    .text {
+      margin-bottom: 56px;
+      @include transition.transitionAll();
+    }
+  }
+}

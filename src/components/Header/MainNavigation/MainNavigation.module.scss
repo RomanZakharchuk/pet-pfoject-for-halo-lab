@@ -1,0 +1,29 @@
+@use "src/scss/link";
+@use "src/scss/displaySizes";
+
+.menu {
+  display: none;
+  width: 100%;
+  max-width: 548px;
+
+  .menuContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+
+    .menuItem {
+      list-style: none;
+
+      .menuLink {
+        @include link.link();
+      }
+    }
+  }
+}
+
+@media all and (min-width: displaySizes.$TABLE_WIDTH) {
+  .menu {
+    display: block;
+  }
+}

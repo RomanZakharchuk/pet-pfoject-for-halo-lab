@@ -1,0 +1,1 @@
+export { FooterSocialMediaBlock } from './FooterSocialMediaBlock';

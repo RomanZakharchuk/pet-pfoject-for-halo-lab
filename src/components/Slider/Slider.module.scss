@@ -1,0 +1,65 @@
+@use "src/scss/color";
+@use "src/scss/container";
+@use "src/scss/font";
+@use "src/scss/displaySizes";
+
+.slider {
+  background: color.$waxflower;
+
+  .container {
+    @include container.container();
+    display: flex;
+    justify-content: center;
+    padding: 104px 0 72px 0;
+    @include container.containerPadding();
+    overflow: hidden;
+
+    .inner {
+      width: 100%;
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.buttonsBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+
+  .buttonsInner {
+    width: 135px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .identifier {
+    @include font.regular();
+    font-size: 22px;
+    line-height: 32px;
+    color: color.$black;
+
+    span {
+      opacity: 0.2;
+    }
+  }
+
+  .btn {
+    cursor: pointer;
+    line-height: 0;
+  }
+}
+
+@media all and (min-width: displaySizes.$TABLE_WIDTH) {
+  .slider {
+    .container {
+      .inner {
+        display: block;
+      }
+    }
+  }
+}

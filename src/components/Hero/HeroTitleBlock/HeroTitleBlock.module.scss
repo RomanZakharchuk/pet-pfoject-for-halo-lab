@@ -1,0 +1,48 @@
+@use "src/scss/fontStyle";
+@use "src/scss/displaySizes";
+@use "src/scss/transition";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  @include transition.transitionAll();
+
+  .title {
+    width: 336px;
+    height: 181px;
+    @include transition.transitionAll();
+  }
+
+  .text {
+    max-width: 448px;
+    @include fontStyle.text();
+    margin: 30px 0 40px 0;
+    @include transition.transitionAll();
+  }
+}
+
+@media all and (min-width: displaySizes.$TABLE_WIDTH) {
+  .container {
+    margin-bottom: 40px;
+    @include transition.transitionAll();
+
+    .title {
+      width: 543px;
+      height: 293px;
+      @include transition.transitionAll();
+    }
+  }
+}
+
+@media all and (min-width: displaySizes.$LAPTOP_WIDTH) {
+  .container {
+    width: 50%;
+    @include transition.transitionAll();
+
+    .text {
+      margin: 60px 0 48px 0;
+      @include transition.transitionAll();
+    }
+  }
+}

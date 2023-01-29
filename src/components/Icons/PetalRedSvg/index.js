@@ -1,0 +1,1 @@
+export { PetalRedSvg } from './PetalRedSvg';

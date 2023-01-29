@@ -1,0 +1,36 @@
+@use "src/scss/color";
+@use "src/scss/container";
+@use "src/scss/displaySizes";
+@use "src/scss/transition";
+
+.hero {
+  background: color.$hint-of-red;
+}
+
+.container {
+  position: relative;
+  @include container.container();
+  padding: 110px 18px 402px 18px;
+  @include transition.transitionAll();
+}
+
+@media all and (min-width: displaySizes.$TABLE_WIDTH) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0;
+    @include transition.transitionAll();
+  }
+}
+
+@media all and (min-width: displaySizes.$LAPTOP_WIDTH) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: center;
+    padding-bottom: 128px;
+    @include container.containerPadding();
+    @include transition.transitionAll();
+  }
+}

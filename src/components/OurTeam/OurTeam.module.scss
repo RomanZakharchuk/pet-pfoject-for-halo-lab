@@ -1,0 +1,51 @@
+@use "src/scss/container";
+@use "src/scss/fontStyle";
+@use "src/scss/displaySizes";
+@use "src/scss/transition";
+
+.container {
+  @include container.container();
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 263px 18px 110px 18px;
+  @include transition.transitionAll();
+
+  .title {
+    @include fontStyle.h2();
+    margin-bottom: 8px;
+    @include transition.transitionAll();
+  }
+
+  .text {
+    max-width: 352px;
+    @include fontStyle.textSection();
+    text-align: center;
+    margin-bottom: 40px;
+    @include transition.transitionAll();
+  }
+}
+
+@media all and (min-width: displaySizes.$TABLE_WIDTH) {
+  .container {
+    padding: 192px 0;
+    @include transition.transitionAll();
+  }
+}
+
+@media all and (min-width: displaySizes.$LAPTOP_WIDTH) {
+  .container {
+    @include container.containerPadding();
+    @include transition.transitionAll();
+
+    .title {
+      margin-bottom: 16px;
+      @include transition.transitionAll();
+    }
+
+    .text {
+      margin-bottom: 13px;
+      @include transition.transitionAll();
+    }
+  }
+}

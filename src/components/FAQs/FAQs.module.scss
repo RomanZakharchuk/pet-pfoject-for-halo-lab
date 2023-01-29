@@ -1,0 +1,30 @@
+@use "src/scss/container";
+@use "src/scss/displaySizes";
+@use "src/scss/transition";
+
+.container {
+  @include container.container();
+  padding: 100px 18px;
+  @include transition.transitionAll();
+}
+
+@media all and (min-width: displaySizes.$TABLE_WIDTH) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include container.containerPadding();
+    @include transition.transitionAll();
+  }
+}
+
+@media all and (min-width: displaySizes.$LAPTOP_WIDTH) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 192px 0;
+    @include container.containerPadding();
+    @include transition.transitionAll();
+  }
+}

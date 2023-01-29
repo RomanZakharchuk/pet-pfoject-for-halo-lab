@@ -1,0 +1,1 @@
+export { FooterContactsBlock } from './FooterContactsBlock';

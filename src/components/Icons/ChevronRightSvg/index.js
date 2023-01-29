@@ -1,0 +1,1 @@
+export { ChevronRightSvg } from './ChevronRightSvg';

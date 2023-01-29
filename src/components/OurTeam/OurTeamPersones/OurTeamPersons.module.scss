@@ -1,0 +1,63 @@
+@use "src/scss/displaySizes";
+@use "src/scss/transition";
+
+.ourTeamPersons {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .rightLine {
+    position: absolute;
+    top: 100px;
+    left: 8px;
+    transform: rotate(37deg);
+    @include transition.transitionAll();
+  }
+
+  .leftLine {
+    position: absolute;
+    bottom: 172px;
+    right: -7px;
+    transform: rotate(152deg);
+    @include transition.transitionAll();
+  }
+}
+
+@media all and (min-width: displaySizes.$TABLE_WIDTH) {
+  .ourTeamPersons {
+    .rightLine {
+      top: 165px;
+      left: 160px;
+      transform: rotate(53deg);
+      @include transition.transitionAll();
+    }
+
+    .leftLine {
+      bottom: 346px;
+      right: 153px;
+      transform: rotate(143deg);
+      @include transition.transitionAll();
+    }
+  }
+}
+
+@media all and (min-width: displaySizes.$LAPTOP_WIDTH) {
+  .ourTeamPersons {
+    flex-direction: row;
+    justify-content: center;
+
+    .rightLine {
+      top: 14px;
+      left: 180px;
+      transform: rotate(0);
+      @include transition.transitionAll();
+    }
+
+    .leftLine {
+      top: 197px;
+      right: 203px;
+      transform: rotate(0);
+      @include transition.transitionAll();
+    }
+  }
+}

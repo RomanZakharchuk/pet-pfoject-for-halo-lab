@@ -1,0 +1,34 @@
+@use "src/scss/fontStyle";
+@use "src/scss/displaySizes";
+@use "src/scss/transition";
+
+.contactTitleBlock {
+  margin-bottom: 55px;
+  padding: 0 26px;
+  @include transition.transitionAll();
+
+  .title {
+    @include fontStyle.h2();
+    margin-bottom: 20px;
+    @include transition.transitionAll();
+  }
+
+  .text {
+    display: inline-block;
+    max-width: 384px;
+    @include fontStyle.textSection();
+  }
+}
+
+@media all and (min-width: displaySizes.$LAPTOP_WIDTH) {
+  .contactTitleBlock {
+    margin-bottom: 0;
+    padding: 0;
+    @include transition.transitionAll();
+
+    .title {
+      margin-bottom: 40px;
+      @include transition.transitionAll();
+    }
+  }
+}

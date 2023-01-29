@@ -1,0 +1,42 @@
+@use "src/scss/container";
+@use "src/scss/color";
+@use "src/scss/displaySizes";
+@use "src/scss/transition";
+
+.container {
+  .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: color.$waxflower;
+    border-radius: 20px;
+    padding: 42px 18px 56px 18px;
+    @include transition.transitionAll();
+  }
+}
+
+@media all and (min-width: displaySizes.$TABLE_WIDTH) {
+  .container {
+    .inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+@media all and (min-width: displaySizes.$LAPTOP_WIDTH) {
+  .container {
+    @include container.container();
+    @include container.containerPadding();
+    @include transition.transitionAll();
+
+    .inner {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 104px 80px;
+      @include transition.transitionAll();
+    }
+  }
+}

@@ -1,0 +1,98 @@
+@use "src/scss/font";
+@use "src/scss/color";
+@use "src/scss/displaySizes";
+@use "src/scss/transition";
+
+.heroImageBlock {
+  position: absolute;
+  left: 95px;
+  @include transition.transitionAll();
+
+  .imageParrot {
+    line-height: 0;
+  }
+
+  .multicolorBlock {
+    width: 216px;
+    height: 254px;
+    position: absolute;
+    bottom: 110px;
+    left: -73px;
+    line-height: 0;
+    @include transition.transitionAll();
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .heartSvg {
+      width: 32px;
+      height: 38px;
+      position: absolute;
+      top: 32px;
+      left: 32px;
+      @include transition.transitionAll();
+    }
+
+    .title {
+      position: absolute;
+      bottom: 65px;
+      left: 29px;
+      @include font.bold();
+      font-size: 15px;
+      line-height: 21px;
+      text-transform: capitalize;
+      color: color.$white;
+      @include transition.transitionAll();
+    }
+
+    .number {
+      position: absolute;
+      bottom: 5px;
+      left: 29px;
+      @include font.bold();
+      font-size: 40px;
+      line-height: 80px;
+      color: color.$white;
+      @include transition.transitionAll();
+    }
+  }
+}
+
+@media all and (min-width: displaySizes.$TABLE_WIDTH) {
+  .heroImageBlock {
+    position: relative;
+    left: 0;
+    @include transition.transitionAll();
+
+    .multicolorBlock {
+      width: 272px;
+      height: 320px;
+      bottom: -50px;
+      left: -45px;
+      @include transition.transitionAll();
+
+      .heartSvg {
+        width: 48px;
+        height: 56px;
+        @include transition.transitionAll();
+      }
+
+      .title {
+        bottom: 112px;
+        left: 32px;
+        font-size: 20px;
+        line-height: 28px;
+        @include transition.transitionAll();
+      }
+
+      .number {
+        bottom: 32px;
+        left: 32px;
+        font-size: 56px;
+        @include transition.transitionAll();
+      }
+    }
+  }
+}

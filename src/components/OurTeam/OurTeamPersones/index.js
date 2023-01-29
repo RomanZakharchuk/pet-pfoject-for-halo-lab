@@ -1,0 +1,1 @@
+export { OurTeamPersons } from './OurTeamPersons';

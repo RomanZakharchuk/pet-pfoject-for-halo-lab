@@ -1,0 +1,22 @@
+@use "src/scss/fontStyle";
+
+.footerSocialMediaBlock {
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    @include fontStyle.h6();
+    margin-bottom: 34px;
+  }
+
+  .socialMediaWrap {
+
+    .link {
+      cursor: pointer;
+
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+    }
+  }
+}

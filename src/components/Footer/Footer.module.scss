@@ -1,0 +1,38 @@
+@use "src/scss/color";
+@use "src/scss/container";
+@use "src/scss/displaySizes";
+@use "src/scss/transition";
+
+.footer {
+  background: color.$hint-of-red;
+
+  .container {
+    @include container.container();
+    padding: 43px 18px;
+    @include transition.transitionAll();
+  }
+
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    @include transition.transitionAll();
+  }
+}
+
+
+@media all and (min-width: displaySizes.$TABLE_WIDTH) {
+  .footer {
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      @include container.containerPadding();
+      @include transition.transitionAll();
+    }
+
+    .inner {
+      width: 56%;
+      @include transition.transitionAll();
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@use "src/scss/color";
+@use "src/scss/btns";
+
+.form {
+  position: relative;
+  background: color.$white;
+  box-shadow: 0 30px 40px rgba(240, 101, 126, 0.05);
+  border-radius: 40px;
+  padding: 20px 130px 20px 48px;
+
+  .marker {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+  }
+
+  .input {
+    width: 90%;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      opacity: 100;
+      transition: opacity 0.4s;
+    }
+
+    &:focus::placeholder {
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+  }
+
+  .btn {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    @include btns.btn();
+  }
+}

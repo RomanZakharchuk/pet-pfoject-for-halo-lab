@@ -1,0 +1,26 @@
+@use "src/scss/container";
+@use "src/scss/color";
+@use "src/scss/displaySizes";
+@use "src/scss/transition";
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 27px;
+  @include transition.transitionAll();
+}
+
+.line {
+  width: 100%;
+  height: 4px;
+  background: color.$ebony-clay;
+}
+
+@media all and (min-width: displaySizes.$TABLE_WIDTH) {
+  .inner {
+    @include transition.transitionAll();
+    margin-bottom: 40px;
+  }
+
+}

@@ -1,0 +1,96 @@
+@use "src/scss/color";
+@use "src/scss/fontStyle";
+@use "src/scss/btns";
+@use "src/scss/displaySizes";
+@use "src/scss/transition";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  background: color.$hint-of-red;
+  border-radius: 16px;
+  padding: 40px 24px;
+  position: relative;
+  @include transition.transitionAll();
+
+  .title {
+    @include fontStyle.h3();
+    text-align: center;
+    margin-bottom: 24px;
+    @include transition.transitionAll();
+  }
+
+  .input {
+    width: 291px;
+    @include fontStyle.textInput();
+    background: color.$white;
+    border-radius: 40px;
+    padding: 12px 24px;
+    outline: none;
+    border: none;
+    margin-bottom: 16px;
+    @include transition.transitionAll();
+
+    &:nth-child(3) {
+      margin-bottom: 32px;
+      @include transition.transitionAll();
+    }
+  }
+
+  .btn {
+    @include btns.btn();
+  }
+
+  .petalPurpleSvg {
+    width: 30px;
+    height: 15px;
+    position: absolute;
+    top: 25px;
+    right: -20px;
+    @include transition.transitionAll();
+  }
+
+  .petalRedSvg {
+    width: 56px;
+    height: 34px;
+    position: absolute;
+    top: -20px;
+    right: -25px;
+    @include transition.transitionAll();
+  }
+}
+
+@media all and (min-width: displaySizes.$TABLE_WIDTH) {
+  .form {
+    padding: 40px 55px;
+    @include transition.transitionAll();
+
+    .input {
+      width: 312px;
+      @include transition.transitionAll();
+
+      &::placeholder {
+        opacity: 100;
+        transition: opacity 0.4s;
+      }
+
+      &:focus::placeholder {
+        opacity: 0;
+        transition: opacity 0.4s;
+      }
+    }
+
+    .petalPurpleSvg {
+      width: 40px;
+      height: 22px;
+      top: 50px;
+      @include transition.transitionAll();
+    }
+
+    .petalRedSvg {
+      width: 61px;
+      height: 56px;
+      @include transition.transitionAll();
+    }
+  }
+}

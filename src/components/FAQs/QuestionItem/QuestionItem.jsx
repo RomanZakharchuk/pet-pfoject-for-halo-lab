@@ -16,7 +16,7 @@ const QuestionItem = forwardRef( ( { question }, ref ) => {
                 <h5 className={style.title}>{title}</h5>
                 <span className={`${style.text} ${isActive && style.showQuestion}`}>{body}</span>
                 <div className={style.line}></div>
-                <div onClick={toggleBtn} className={`${style.switcherBtn} ${isActive && style.plus}`}></div>
+                <div onClick={toggleBtn} className={`${style.switcherBtn} ${isActive && style.minus}`}></div>
             </div>
         );
     }

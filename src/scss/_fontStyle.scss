@@ -85,45 +85,43 @@
   mix-blend-mode: normal;
 }
 
-@media all and (min-width: displaySizes.$TABLE_WIDTH) {
-  @mixin h2() {
-    font-size: 40px;
-    line-height: 56px;
-  }
+@mixin h2Desktop() {
+  font-size: 40px;
+  line-height: 56px;
+}
 
-  @mixin h3() {
-    font-size: 32px;
-    line-height: 56px;
-  }
+@mixin h3Desktop() {
+  font-size: 32px;
+  line-height: 56px;
+}
 
-  @mixin h4() {
-    font-size: 34px;
-  }
+@mixin h4Desktop() {
+  font-size: 34px;
+}
 
-  @mixin h5() {
-    font-size: 24px;
-    line-height: 34px;
-  }
+@mixin h5Desktop() {
+  font-size: 24px;
+  line-height: 34px;
+}
 
-  @mixin h6() {
-    font-size: 20px;
-  }
+@mixin h6Desktop() {
+  font-size: 20px;
+}
 
-  @mixin text() {
-    font-size: 16px;
-  }
+@mixin textDesktop() {
+  font-size: 16px;
+}
 
-  @mixin textQuestion() {
-    font-size: 16px;
-    line-height: 24px;
-  }
+@mixin textQuestionDesktop() {
+  font-size: 16px;
+  line-height: 24px;
+}
 
-  @mixin textSection() {
-    font-size: 18px;
-    line-height: 32px;
-  }
+@mixin textSectionDesktop() {
+  font-size: 18px;
+  line-height: 32px;
+}
 
-  @mixin textFooter() {
-    font-size: 13px;
-  }
+@mixin textFooterDesktop() {
+  font-size: 13px;
 }

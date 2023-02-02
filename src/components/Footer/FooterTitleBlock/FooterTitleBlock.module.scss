@@ -26,11 +26,13 @@
     @include transition.transitionAll();
 
     .title {
+      @include fontStyle.h4Desktop();
       margin-bottom: 32px;
       @include transition.transitionAll();
     }
 
     .text {
+      @include fontStyle.textFooterDesktop();
       max-width: 155px;
       opacity: 1;
       @include transition.transitionAll();

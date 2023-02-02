@@ -21,6 +21,7 @@
   }
 
   .text {
+    max-width: 85%;
     max-height: 0;
     @include fontStyle.textQuestion();
     margin-bottom: 16px;
@@ -57,22 +58,19 @@
       height: 2px;
       background: color.$white;
     }
-  }
-
-  .plus {
-    &::after {
-      content: '';
-      position: absolute;
-      width: 14px;
-      height: 2px;
-      background: color.$white;
-    }
 
     &::before {
       content: '';
       width: 2px;
       height: 14px;
       background: color.$white;
+    }
+  }
+
+  .minus {
+    &::before {
+      content: '';
+      width: 0;
     }
   }
 }
@@ -85,8 +83,13 @@
     }
 
     .title {
+      @include fontStyle.h5Desktop();
       padding-right: 0;
       @include transition.transitionAll();
+    }
+
+    .text {
+      @include fontStyle.textQuestionDesktop();
     }
   }
 }

@@ -3,6 +3,8 @@
 
 .form {
   position: relative;
+  width: 100%;
+  max-width: 448px;
   background: color.$white;
   box-shadow: 0 30px 40px rgba(240, 101, 126, 0.05);
   border-radius: 40px;

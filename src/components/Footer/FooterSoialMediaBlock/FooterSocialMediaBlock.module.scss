@@ -1,4 +1,5 @@
 @use "src/scss/fontStyle";
+@use "src/scss/displaySizes";
 
 .footerSocialMediaBlock {
   display: flex;
@@ -6,17 +7,25 @@
 
   .title {
     @include fontStyle.h6();
-    margin-bottom: 34px;
+    margin-bottom: 15px;
   }
 
   .socialMediaWrap {
-
     .link {
       cursor: pointer;
 
       &:not(:last-child) {
         margin-right: 16px;
       }
+    }
+  }
+}
+
+@media all and (min-width: displaySizes.$TABLE_WIDTH) {
+  .footerSocialMediaBlock {
+    .title {
+      @include fontStyle.h6Desktop();
+      margin-bottom: 34px;
     }
   }
 }
